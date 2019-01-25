@@ -75,7 +75,7 @@ public class EnvelopingTestCase {
   @Test
   public void enveloping() throws Exception {
     Document document = documentBasedOnThe(XML_PAYLOAD.getBytes());
-    document.setStrictErrorChecking(false);
+    document.setStrictErrorChecking(true);
 
     DigestMethod digestMethod = fac.newDigestMethod(DigestMethod.SHA256, null);
     Reference reference = fac.newReference("#data", digestMethod);
